@@ -50,7 +50,7 @@ public class RootUtilities {
         }
     }
 
-    public static double truncate(double number, int numberOfDecimals ){
+    public static double round(double number, int numberOfDecimals ){
         return ((long) (number*elevateTo(10,numberOfDecimals) + 0.5)) / elevateTo(10,numberOfDecimals) ;
     }
 
