@@ -104,10 +104,10 @@ public class MainActivity extends AppCompatActivity {
                 precision = updatePrecision(value,exponent);
                 mTask.execute();
 
-                tv_bisection.setText("Bisection : " + String.valueOf(RootUtilities.truncateToTen(RootUtilities.rootBisection(exponent,value,precision))));
-                tv_newton.setText("Newton : " + String.valueOf(RootUtilities.truncateToTen(RootUtilities.rootNewton(exponent,value,precision))));
-                tv_dekker.setText("Dekker : " + String.valueOf(RootUtilities.truncateToTen(RootUtilities.rootDekker(exponent,value,precision))));
-                tv_brent.setText("Brent : " +String.valueOf(RootUtilities.truncateToTen(RootUtilities.rootBrent(exponent,value,precision))));
+                tv_bisection.setText("Bisection : " + String.valueOf(RootUtilities.truncate(RootUtilities.rootBisection(exponent,value,precision),10)));
+                tv_newton.setText("Newton : " + String.valueOf(RootUtilities.truncate(RootUtilities.rootNewton(exponent,value,precision),10)));
+                tv_dekker.setText("Dekker : " + String.valueOf(RootUtilities.truncate(RootUtilities.rootDekker(exponent,value,precision),10)));
+                tv_brent.setText("Brent : " +String.valueOf(RootUtilities.truncate(RootUtilities.rootBrent(exponent,value,precision),10)));
 
             }
         });

@@ -1,7 +1,5 @@
 package com.domain.mehdi.rootalgorithmcomparator.Utilities;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.security.InvalidParameterException;
 
 /**
@@ -52,11 +50,8 @@ public class RootUtilities {
         }
     }
 
-    public static double truncateToTen(double num){
-        num = BigDecimal.valueOf(num)
-                .setScale(10, RoundingMode.HALF_UP)
-                .doubleValue();
-        return num;
+    public static double truncate(double number, int numberOfDecimals ){
+        return ((long) (number*elevateTo(10,numberOfDecimals) + 0.5)) / elevateTo(10,numberOfDecimals) ;
     }
 
     public static double rootBisection(int n, double a, double precision) {
